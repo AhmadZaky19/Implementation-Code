@@ -21,7 +21,7 @@ const menghitungPotongan = (harga, voucher) => {
       return "Belum memenuhi belanja minimum";
     } else if (harga >= 50000) {
       let diskon1 = (harga * 50) / 100;
-      if (diskon1 >= 50000) {
+      if (diskon1 > 50000) {
         return 50000;
       } else {
         return diskon1;
@@ -33,14 +33,14 @@ const menghitungPotongan = (harga, voucher) => {
       return "Belum memenuhi belanja minimum";
     } else if (harga >= 25000) {
       let diskon2 = (harga * 60) / 100;
-      if (diskon2 >= 30000) {
+      if (diskon2 > 30000) {
         return 30000;
       } else {
         return diskon2;
       }
     }
   }
-  if (voucher !== "ARKAFOOD5" || voucher !== "DITRAKTIRDEMY") {
+  else {
     return 0;
   }
 };
